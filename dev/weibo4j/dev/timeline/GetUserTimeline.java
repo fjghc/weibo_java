@@ -1,3 +1,9 @@
+/**
+ * @package weibo4j.dev.timeline
+ * @file test.java
+ * @author lzrak47
+ * @date 2013-3-13
+ */
 package weibo4j.dev.timeline;
 
 import weibo4j.Timeline;
