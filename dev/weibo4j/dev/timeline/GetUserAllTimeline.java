@@ -1,6 +1,6 @@
 /**
  * @package weibo4j.dev.timeline
- * @file GetUserTimeline.java
+ * @file GetUserAllTimeline.java
  * @author lzrak47
  * @date 2013-3-13
  */
@@ -12,7 +12,7 @@ import weibo4j.model.StatusWapper;
 import weibo4j.model.Paging;
 import weibo4j.model.WeiboException;
 
-public class GetUserTimeline {
+public class GetUserAllTimeline {
 
 	public static void main(String[] args) {
 		String access_token = args[0];
