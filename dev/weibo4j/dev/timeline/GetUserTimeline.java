@@ -19,10 +19,15 @@ public class GetUserTimeline {
 		Timeline tm = new Timeline();
 		tm.client.setToken(access_token);
 		try {
-			StatusWapper status = tm.getUserTimelineByUid(args[1]);
-			for(Status s : status.getStatuses()){
-				System.out.println(s.getText());
-			}
+            for(int i = 1 ;; i++)
+            {
+                StatusWapper status = tm.getUserTimelineByUid(args[1], new Paging(i,200), 0 , 0);
+                if (status.getStatuses().size() == 0)
+                    break;
+                for(Status s : status.getStatuses()){
+                    System.out.println(s.getText());
+                }
+            }
 		} catch (WeiboException e) {
 			e.printStackTrace();
 		}
